@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main() {
+
+    int tabuleiro[10][10]={0};
+    int navio1[2] = {3, 4};
+        int tamanho_navio = 4;
+        tabuleiro[ navio1[0]][navio1[1]] = 7;
+
+    int navio2[2] = {0, 1};
+        int tamanho_navio2 = 4;
+        tabuleiro[ navio2[0]][navio2[1]] = 4;
+
+
+    printf("esse é o tabuleiro:\n", tabuleiro);
+
+    for (int i = 0; i < tamanho_navio; i++) {
+        tabuleiro[navio1[0]] [navio1[1] + i] = 7;
+    }
+    for (int i = 0; i < tamanho_navio; i++) {
+        tabuleiro[navio2[0] + i] [navio2[1]] = 4;
+    }
+    for (int i= 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            printf("%d", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+        
+
+return 0;
+
+};
